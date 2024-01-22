@@ -1,4 +1,5 @@
 DOMAIN-SUFFIX,vercel.app,Proxy
+DOMAIN,boxjs.com,Proxy
 
 # > iOS
 DOMAIN-SUFFIX,mdes.mastercard.com,Proxy

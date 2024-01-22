@@ -1,0 +1,76 @@
+#!name=BlockAD-TW
+#!desc=去除廣告，台灣環境。［手動維護］
+#!author=OWL
+#!category=去廣告模組
+
+[Rule]
+#! Line 廣告
+#! 白名單
+URL-REGEX,^https:\/\/obs\.line-scdn\.net\/r,DIRECT
+URL-REGEX,^https:\/\/obs-tw\.line-apps\.com\/talk,DIRECT
+DOMAIN,stickershop.line-scdn.net,DIRECT
+
+#! jkg list
+URL-REGEX,^https:\/\/a\.line\.me\/er\/lads\/v\d\/ei\?,REJECT-DROP
+URL-REGEX,^https:\/\/a\.line\.me\/er\/la(ss|dg)\/v\d\/event\/image,REJECT-DROP
+URL-REGEX,^https:\/\/a\.line\.me\/lass\/api\/v\d\/ads$,REJECT-DROP
+URL-REGEX,^https:\/\/a\.line\.me\/oa\/v\d\/e$,REJECT-DROP
+URL-REGEX,^https:\/\/a\.line\.me\/cs\/v\d\/oa$,REJECT-DROP
+URL-REGEX,^https:\/\/gw\.line\.naver\.jp\/ext\/lgfp\/lad\/v1$,REJECT
+URL-REGEX,^https:\/\/gw\.line\.naver\.jp\/ext\/smartch\/banner\/sch\/v\d$,REJECT
+URL-REGEX,^https:\/\/gw\.line\.naver\.jp\/lass\/api\/v1\/ads$,REJECT
+URL-REGEX,^https:\/\/gw\.line\.naver\.jp\/tr\/event$,REJECT
+URL-REGEX,^https:\/\/w\.line\.me\/adp\/api\/ad\/v\d\/,REJECT-DROP
+URL-REGEX,^https:\/\/buy\.line\.me\/api\/graphql\?variables,REJECT
+URL-REGEX,^https:\/\/crs-event\.line\.me\/v\d\/imp,REJECT-DROP
+URL-REGEX,^https:\/\/obs\.line-scdn\.net\/0h.+\/(o|m)\d+x\d+$,REJECT-DROP
+URL-REGEX,^https:\/\/obs\.line-scdn\.net\/0h.+\/\d+p\.mp4$,REJECT-DROP
+URL-REGEX,^https:\/\/obs\.line-scdn\.net\/r\/linecrs\/.+\/m180x180$,REJECT-DROP
+URL-REGEX,^https:\/\/d\.line-scdn\.net\/lcp-prod-photo\/20.+\.(jpg|jpeg|png),REJECT
+URL-REGEX,^https:\/\/cix\.line-apps\.com\/R4\?,REJECT
+URL-REGEX,^https:\/\/scdn\.line-apps\.com\/appresources\/moretab\/list\.json,REJECT
+URL-REGEX,^https:\/\/scdn\.line-apps\.com\/lan\/image\/line\/bannerImageEvent\/,REJECT-DROP
+URL-REGEX,^https:\/\/scdn\.line-apps\.com\/lan\/document\/pageEvent\/line\/ios\/,REJECT-DROP
+URL-REGEX,^https:\/\/sch\.line\.me\/api\/v\d\/ads$,REJECT-DROP
+URL-REGEX,^https:\/\/uts-front\.line-apps\.com\/event$,REJECT-DROP
+URL-REGEX,^https:\/\/uts-front\.line-apps\.com\/settings$,REJECT-DROP
+URL-REGEX,^https:\/\/static\.line-scdn\.net\/ad-sdk\/,REJECT
+URL-REGEX,^https:\/\/nelo2-col\.linecorp\.com\/_store$,REJECT
+
+#! Dcard 
+URL-REGEX,^https:\/\/bilanx\.dcard\.tw\/v\d\/events$,REJECT
+URL-REGEX,^https:\/\/bilanx\.dcard\.tw\/v\d\/configs$,REJECT
+
+#! 漫畫人
+URL-REGEX,^https?:\/\/mangaapi.manhuaren.(com|net)\/.+\/public\/(getShelfActivity|getStartPageAds|getStartPageAds2|getRecommendedGame|getAditem|getAds|getMultiAds|getUpgradeInfo|getVendor|getUserLocation),REJECT
+URL-REGEX,^https?:\/\/mangaapi.manhuaren.(com|net)\/.+\/manga\/getMangaPromotionActivity,REJECT
+URL-REGEX,^https?:\/\/mangaapi.manhuaren.(com|net)\/.+\/ad\/,REJECT
+DOMAIN-SUFFIX,hkadsapi.manhuaren.com,REJECT
+DOMAIN-SUFFIX,adsapi.manhuaren.com,REJECT
+DOMAIN-SUFFIX,videoapi.manhuaren.com,REJECT
+DOMAIN-SUFFIX,bi.manhuaren.com,REJECT
+DOMAIN-SUFFIX,euadsapi.manhuaren.com,REJECT
+DOMAIN-SUFFIX,applog.uc.cn,REJECT-TINYGIF
+
+#! 4Gamer
+URL-REGEX,^https:\/\/www\.4gamers\.com\.tw\/site\/api\/aols\/media\?,REJECT
+
+#! PTT 相關
+URL-REGEX,^https:\/\/pttbrain\.herokuapp\.com\/api\/ptt\/metric\/user\-geo\-distributions,REJECT
+
+#! pixnet
+URL-REGEX,^https:\/\/front\.pixfs\.net\/module\/idlePop\/js\/,REJECT
+
+#! Poke Genie 團體戰
+DOMAIN-SUFFIX,cloudfunctions.net,DIRECT
+DOMAIN-SUFFIX,admob-app-id-4587251595.firebaseio.com,DIRECT
+
+#! 通用阻擋
+DOMAIN,itad.linetv.tw,REJECT
+DOMAIN,m.vpon.com,REJECT
+DOMAIN-SUFFIX,admob.com,REJECT
+DOMAIN-SUFFIX,flurry.com,REJECT
+DOMAIN-SUFFIX,mopub.com,REJECT
+
+[MITM]
+hostname = %APPEND% a.line.me, w.line.me, gw.line.naver.jp, buy.line.me, crs-event.line.me, obs.line-scdn.net, cix.line-apps.com, d.line-scdn.net, scdn.line-apps.com, sch.line.me, uts-front.line-apps.com, static.line-scdn.net, nelo2-col.linecorp.com, mangaapi.manhuaren.com, mangaapi.manhuaren.net, www.4gamers.com.tw, bilanx.dcard.tw, pttbrain.herokuapp.com, front.pixfs.net

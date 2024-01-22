@@ -1,0 +1,50 @@
+#!name=UDP FIREWALL
+#!desc=deactivates and discards all User Datagram Protocol (UDP) requests e.g. WEBRTC & STUN traffics. UDP is supported by default. NOTE: Apple time synchronization uses UDP port 123, Apple Facetime uses port range 3478-3497 & Apple communication-NAT domains use UDP port 3480. Thus, all Apple domains, iCloud, IP-CIDRs and Apple Automomous System Number (ASN) are exempted by the use of complex logic rules.
+#!system=ios
+
+[Rule]
+
+#LOOP CONNECTION BREAKERS
+#========================
+#Surge's automatic REJECT protects against packet loss and prevents application loop requests
+#v4
+AND, ((PROTOCOL,UDP), (IP-CIDR,0.0.0.0/32,no-resolve)),REJECT
+
+#v6
+AND, ((PROTOCOL,UDP), (IP-CIDR6,::/128,no-resolve)),REJECT
+
+#FACEBOOK SDK MALWARE
+#====================
+AND, ((PROTOCOL,UDP), (USER-AGENT,FBiOSSDK*)),REJECT
+
+#[HTTP3-QUIC METHOD]
+#===================
+
+#Automatic UDP blocking: Since most proxy protocols are not suitable for forwarding UDP traffic, Surge will now automatically block UDP traffic to make it fallback to HTTPS/TCP protocol excluding all native apple requests only, thereby ensuring performance. This is synonymous with the BLOCK HTTP3/UDP module in the previous versions of surge when HTTP3 was newly introduced. HTTP3 is simply UDP on :443.
+
+#UDPv6 [::]:443
+#===============
+AND, ((PROTOCOL,UDP), (DEST-PORT,443), (IP-CIDR6,2000::/3,no-resolve)),REJECT-NO-DROP
+
+#UDPv4 & DOMAINS [*]:443
+#=======================
+AND, ((DEST-PORT,443), (PROTOCOL,UDP)),REJECT-NO-DROP
+
+#[PORT MAPPING METHOD]
+#=====================
+#This is a bit less stifling as it blocks all UDP requests globally but unblocks the NTP time protocol port for network synchronization, Apple Facetime as well as communication Network Address Translators (comm-NAT) domain ports.
+
+#Exempting the Apple Time Port is very necessary as Online Certificate Status Protocol (OCSP) and Certificate Validity status of visited websites is time-dependent.
+
+#The facetime ports are also excluded by the use of: NOT, AND, OR OR sub rules to uniquely identify these ports in association with apple requests in terms of Apple Unique IP-CIDRs & Apple IP-ASN. For example, WhatsApp & Facebook also use port 3478 which is one of the same ports used by Apple Facetime.
+
+#The purpose is to block all UDP requests except those from Apple despite the fact that apple share the same UDP ports with some other domains like whatsapp, facebook, etc.
+
+#KNOWN PORT
+#==========
+AND, ((NOT, ((AND, ((OR, ((DEST-PORT,3478-3497), (DEST-PORT,123), (DEST-PORT,16384-16387), (DEST-PORT,16393-16402))), (OR, ((DOMAIN-KEYWORD,imap,extended-matching), (DOMAIN-KEYWORD,akamai,extended-matching), (DOMAIN-KEYWORD,icloud,extended-matching), (DOMAIN-KEYWORD,apple,extended-matching), (IP-CIDR6,2403:300:a04::/48,no-resolve), (IP-CIDR6,2403:300:a05::/48,no-resolve), (IP-CIDR6,2403:300:a08::/48,no-resolve), (IP-CIDR6,2403:300:a0a::/48,no-resolve), (IP-CIDR6,2403:300:a0c::/48,no-resolve), (IP-CIDR6,2403:300:a0e::/48,no-resolve), (IP-CIDR6,2403:300:a14::/48,no-resolve), (IP-CIDR6,2403:300:a16::/48,no-resolve), (IP-CIDR6,2403:300:a26::/48,no-resolve), (IP-CIDR6,2403:300:a30::/48,no-resolve), (IP-CIDR6,2403:300:a32::/48,no-resolve), (IP-CIDR6,2403:300:1500::/42,no-resolve), (IP-CIDR6,2403:300:1502::/48,no-resolve), (IP-CIDR6,2620:149:a00::/48,no-resolve), (IP-CIDR6,2620:149:a06::/48,no-resolve), (IP-CIDR6,2620:149:a08::/48,no-resolve), (IP-CIDR6,2620:149:a09::/48,no-resolve), (IP-CIDR6,2620:149:a0a::/48,no-resolve), (IP-CIDR6,2620:149:a0c::/48,no-resolve), (IP-CIDR6,2620:149:a0d::/48,no-resolve), (IP-CIDR6,2620:149:a0e::/48,no-resolve), (IP-CIDR6,2620:149:a0f::/48,no-resolve), (IP-CIDR6,2620:149:a10::/48,no-resolve), (IP-CIDR6,2620:149:a12::/48,no-resolve), (IP-CIDR6,2620:149:a14::/48,no-resolve), (IP-CIDR6,2620:149:a15::/48,no-resolve), (IP-CIDR6,2620:149:a16::/48,no-resolve), (IP-CIDR6,2620:149:a18::/48,no-resolve), (IP-CIDR6,2620:149:a1a::/48,no-resolve), (IP-CIDR6,2620:149:a1c::/48,no-resolve), (IP-CIDR6,2620:149:a1e::/48,no-resolve), (IP-CIDR6,2620:149:a21::/48,no-resolve), (IP-CIDR6,2620:149:a22::/48,no-resolve), (IP-CIDR6,2620:149:a23::/48,no-resolve), (IP-CIDR6,2620:149:a25::/48,no-resolve), (IP-CIDR6,2620:149:a28::/48,no-resolve), (IP-CIDR6,2620:149:a29::/48,no-resolve), (IP-CIDR6,2620:149:a31::/48,no-resolve), (IP-CIDR6,2620:149:a32::/48,no-resolve), (IP-CIDR6,2620:149:a33::/48,no-resolve), (IP-CIDR6,2620:149:ae1::/48,no-resolve), (IP-CIDR6,2620:149:ae6::/48,no-resolve), (IP-CIDR6,2a01:b740:a00::/48,no-resolve), (IP-CIDR6,2a01:b740:a02::/48,no-resolve), (IP-CIDR6,2a01:b740:a06::/48,no-resolve), (IP-CIDR6,2a01:b740:a08::/48,no-resolve), (IP-CIDR6,2a01:b740:a0a::/48,no-resolve), (IP-CIDR6,2a01:b740:a10::/48,no-resolve), (IP-CIDR6,2a01:b740:a11::/48,no-resolve), (IP-CIDR6,2a01:b740:a14::/48,no-resolve), (IP-CIDR6,2a01:b740:a16::/48,no-resolve), (IP-CIDR6,2a01:b740:a18::/48,no-resolve), (IP-CIDR6,2a01:b740:a1a::/48,no-resolve), (IP-CIDR6,2a01:b740:a1c::/48,no-resolve), (IP-CIDR6,2a01:b740:a1e::/48,no-resolve), (IP-CIDR6,2a01:b740:a20::/48,no-resolve), (IP-CIDR6,2a01:b740:a22::/48,no-resolve), (IP-CIDR6,2a01:b740:a24::/48,no-resolve), (IP-CIDR6,2a01:b740:a26::/48,no-resolve), (IP-CIDR6,2a01:b740:a30::/48,no-resolve), (IP-CIDR,139.178.159.0/24,no-resolve), (IP-CIDR,17.0.0.0/8,no-resolve), (IP-ASN,6185,no-resolve), (IP-ASN,714,no-resolve))))))), (PROTOCOL,UDP), (DEST-PORT,0-1023)),REJECT-NO-DROP
+
+#PRIVATE PORT
+#============
+#Dynamic/Private: 49152 through 65535.
+AND, ((NOT, ((AND, ((OR, ((DEST-PORT,3478-3497), (DEST-PORT,123), (DEST-PORT,16384-16387), (DEST-PORT,16393-16402))), (OR, ((DOMAIN-KEYWORD,imap,extended-matching), (DOMAIN-KEYWORD,akamai,extended-matching), (DOMAIN-KEYWORD,icloud,extended-matching), (DOMAIN-KEYWORD,apple,extended-matching), (IP-CIDR6,2403:300:a04::/48,no-resolve), (IP-CIDR6,2403:300:a05::/48,no-resolve), (IP-CIDR6,2403:300:a08::/48,no-resolve), (IP-CIDR6,2403:300:a0a::/48,no-resolve), (IP-CIDR6,2403:300:a0c::/48,no-resolve), (IP-CIDR6,2403:300:a0e::/48,no-resolve), (IP-CIDR6,2403:300:a14::/48,no-resolve), (IP-CIDR6,2403:300:a16::/48,no-resolve), (IP-CIDR6,2403:300:a26::/48,no-resolve), (IP-CIDR6,2403:300:a30::/48,no-resolve), (IP-CIDR6,2403:300:a32::/48,no-resolve), (IP-CIDR6,2403:300:1500::/42,no-resolve), (IP-CIDR6,2403:300:1502::/48,no-resolve), (IP-CIDR6,2620:149:a00::/48,no-resolve), (IP-CIDR6,2620:149:a06::/48,no-resolve), (IP-CIDR6,2620:149:a08::/48,no-resolve), (IP-CIDR6,2620:149:a09::/48,no-resolve), (IP-CIDR6,2620:149:a0a::/48,no-resolve), (IP-CIDR6,2620:149:a0c::/48,no-resolve), (IP-CIDR6,2620:149:a0d::/48,no-resolve), (IP-CIDR6,2620:149:a0e::/48,no-resolve), (IP-CIDR6,2620:149:a0f::/48,no-resolve), (IP-CIDR6,2620:149:a10::/48,no-resolve), (IP-CIDR6,2620:149:a12::/48,no-resolve), (IP-CIDR6,2620:149:a14::/48,no-resolve), (IP-CIDR6,2620:149:a15::/48,no-resolve), (IP-CIDR6,2620:149:a16::/48,no-resolve), (IP-CIDR6,2620:149:a18::/48,no-resolve), (IP-CIDR6,2620:149:a1a::/48,no-resolve), (IP-CIDR6,2620:149:a1c::/48,no-resolve), (IP-CIDR6,2620:149:a1e::/48,no-resolve), (IP-CIDR6,2620:149:a21::/48,no-resolve), (IP-CIDR6,2620:149:a22::/48,no-resolve), (IP-CIDR6,2620:149:a23::/48,no-resolve), (IP-CIDR6,2620:149:a25::/48,no-resolve), (IP-CIDR6,2620:149:a28::/48,no-resolve), (IP-CIDR6,2620:149:a29::/48,no-resolve), (IP-CIDR6,2620:149:a31::/48,no-resolve), (IP-CIDR6,2620:149:a32::/48,no-resolve), (IP-CIDR6,2620:149:a33::/48,no-resolve), (IP-CIDR6,2620:149:ae1::/48,no-resolve), (IP-CIDR6,2620:149:ae6::/48,no-resolve), (IP-CIDR6,2a01:b740:a00::/48,no-resolve), (IP-CIDR6,2a01:b740:a02::/48,no-resolve), (IP-CIDR6,2a01:b740:a06::/48,no-resolve), (IP-CIDR6,2a01:b740:a08::/48,no-resolve), (IP-CIDR6,2a01:b740:a0a::/48,no-resolve), (IP-CIDR6,2a01:b740:a10::/48,no-resolve), (IP-CIDR6,2a01:b740:a11::/48,no-resolve), (IP-CIDR6,2a01:b740:a14::/48,no-resolve), (IP-CIDR6,2a01:b740:a16::/48,no-resolve), (IP-CIDR6,2a01:b740:a18::/48,no-resolve), (IP-CIDR6,2a01:b740:a1a::/48,no-resolve), (IP-CIDR6,2a01:b740:a1c::/48,no-resolve), (IP-CIDR6,2a01:b740:a1e::/48,no-resolve), (IP-CIDR6,2a01:b740:a20::/48,no-resolve), (IP-CIDR6,2a01:b740:a22::/48,no-resolve), (IP-CIDR6,2a01:b740:a24::/48,no-resolve), (IP-CIDR6,2a01:b740:a26::/48,no-resolve), (IP-CIDR6,2a01:b740:a30::/48,no-resolve), (IP-CIDR,139.178.159.0/24,no-resolve), (IP-CIDR,17.0.0.0/8,no-resolve), (IP-ASN,6185,no-resolve), (IP-ASN,714,no-resolve))))))), (PROTOCOL,UDP), (DEST-PORT,49152-65535)),REJECT

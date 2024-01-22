@@ -1,0 +1,8 @@
+DOMAIN-SUFFIX,vercel.app,Proxy
+
+# > iOS
+DOMAIN-SUFFIX,mdes.mastercard.com,Proxy
+DOMAIN-SUFFIX,vntsnotificationservice.visa.com,Proxy
+DOMAIN-SUFFIX,hushed.com,美國 // Added for: api.hushed.com:443
+
+# > macOS

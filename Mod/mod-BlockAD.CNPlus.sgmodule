@@ -1,7 +1,5 @@
 #!name=BlockAD-CNPlus
 #!desc=去除廣告-大陸環境。［行動網路模式時自動啟動］
-#!author=OWL
-#!category=去廣告模組
 #!system=ios
 
 [Rule]

@@ -31,7 +31,7 @@ DOMAIN-SUFFIX,smtp,DIRECT
 DOMAIN-KEYWORD,aria2,DIRECT
 DOMAIN-KEYWORD,announce,DIRECT
 DOMAIN-KEYWORD,torrent,DIRECT
-#DOMAIN-KEYWORD,tracker,DIRECT
+DOMAIN-KEYWORD,tracker,DIRECT
 URL-REGEX,(Subject|HELO|SMTP),DIRECT
 URL-REGEX,(api|ps|sv|offnavi|newvector|ulog.imap|newloc)(.map|).(baidu|n.shifen).com,DIRECT
 URL-REGEX,(.+.|^)(360|so|qihoo|360safe|qhimg|360totalsecurity|yunpan).(cn|com),DIRECT

@@ -2,8 +2,8 @@
 #!desc= 防火牆：設備切換模式時（行動網路/Wi-Fi）停止連線15秒；Apple、Surge除外。 作者：NobyDa
 
 [Script]
-Firewall-Rules = type=rule,script-path=mod-Firewall-Timed.js
-Firewall-Event = type=event,event-name=network-changed,script-path=mod-Firewall-WiFi.js
+Firewall-Rules = type=rule,script-path=https://raw.githubusercontent.com/julia3q/Surge/main/Mod/mod-Firewall-Timed.js
+Firewall-Event = type=event,event-name=network-changed,script-path=https://raw.githubusercontent.com/julia3q/Surge/main/Mod/mod-Firewall-WiFi.js
 
 [Rule]
-AND,((NOT,((OR,((USER-AGENT,Surge*), (RULE-SET,mod-Firewall.Apple.list))))), (SCRIPT,Firewall-Rules)),REJECT
+AND,((NOT,((OR,((USER-AGENT,Surge*), (RULE-SET,https://raw.githubusercontent.com/julia3q/Surge/main/Mod/mod-Firewall.Apple.list))))), (SCRIPT,Firewall-Rules)),REJECT

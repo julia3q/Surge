@@ -1,2 +1,2 @@
-# Surge
-# Surge
+# 個人私用配置
+# Surge 個人私用

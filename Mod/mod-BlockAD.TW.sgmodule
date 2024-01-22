@@ -1,5 +1,6 @@
 #!name=BlockAD-TW
 #!desc=去除廣告，台灣環境。［手動維護］
+#!category=去廣告整合
 
 [Rule]
 #! Line 廣告

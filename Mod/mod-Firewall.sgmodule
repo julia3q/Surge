@@ -1,5 +1,7 @@
-#!name= Network Firewall
-#!desc= 防火牆：設備切換模式時（行動網路/Wi-Fi）停止連線15秒；Apple、Surge除外。 作者：NobyDa
+#!name= Surge Firewall
+#!desc= Surge 防火牆：設備切換模式時（行動網路/Wi-Fi）停止連線15秒；Apple、Surge除外。
+#!author=NobyDa
+#!system=ios
 
 [Script]
 Firewall-Rules = type=rule,script-path=https://raw.githubusercontent.com/julia3q/Surge/main/Mod/mod-Firewall-Timed.js

@@ -1,7 +1,6 @@
 #!name=BlockAD-Apps.Bata
 #!desc=去除 CN Apps 各種腦人的廣告。［手動維護］
-#!author=OWL
-#!category=去廣告模組
+#!author=Julia
 #!system=ios
 
 [URL Rewrite]

@@ -1,7 +1,5 @@
 #!name=BlockAD-TW
 #!desc=去除廣告，台灣環境。［手動維護］
-#!author=OWL
-#!category=去廣告模組
 
 [Rule]
 #! Line 廣告

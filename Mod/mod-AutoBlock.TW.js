@@ -1,6 +1,6 @@
 const ssid1 = "JJESP-5G";
 const ssid2 = "SSID2";
-const name = "BlockAD-TW";
+const name = "BlockAD-TWPlus";
 let home = ($network.wifi.ssid === ssid1) || ($network.wifi.ssid === ssid2);
 
 const getModuleStatus = new Promise((resolve) => {

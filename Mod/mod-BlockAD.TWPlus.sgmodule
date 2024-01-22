@@ -1,0 +1,7 @@
+#!name=BlockAD-TWPlus
+#!desc=去除廣告，台灣環境。［行動網路模式時自動啟動］
+#!system=ios
+
+[Rule]
+#! 通用阻擋
+

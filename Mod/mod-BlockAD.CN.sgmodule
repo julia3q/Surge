@@ -1,6 +1,6 @@
 #!name=BlockAD-CN
-#!desc=去除廣告，通用版。2024.1.19
-#!category=去廣告整合
+#!desc=CN 環境去除廣告。［手動維護］v2024.1.19
+#!category=阻擋廣告整合
 
 [Rule]
 #! 誤殺放行

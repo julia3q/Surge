@@ -1,6 +1,6 @@
 #!name=BlockAD-CNPlus
-#!desc=去除廣告-大陸環境。［行動網路模式時自動啟動］
-#!category=去廣告整合
+#!desc=［行動網路模式時自動啟動］CN 環境去除廣告。
+#!category=阻擋廣告整合
 #!system=ios
 
 [Rule]

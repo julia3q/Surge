@@ -9,8 +9,10 @@
 
 #CNstart---
 DOMAIN-SUFFIX,gz-data.com,REJECT
+DOMAIN-SUFFIX,log.aliyuncs.com,REJECT
+DOMAIN-SUFFIX,log.mmstat.com,REJECT
 
-#! 微信小程序去广告通用规则
+#! 微信小程序去广告
 DOMAIN,wxsnsdy.wxs.qq.com,REJECT
 DOMAIN,wxsmsdy.video.qq.com,REJECT
 DOMAIN,wxsnsdythumb.wxs.qq.com,REJECT

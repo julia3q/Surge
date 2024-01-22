@@ -1,0 +1,34 @@
+######################################
+# Ruleset - Apple CN 手動整理版
+#
+# 可以理解為哪些 Apple's domains 預設走 China（關閉的意思）.
+#
+# Data from:
+#  - https://github.com/felixonmars/dnsmasq-china-list
+######################################
+.cn.apple.com
+.cn.ls.apple.com
+.cn-ssl.ls.apple.com
+.smoot.apple.cn
+.cdn-cn1.apple-mapkit.com
+.cdn-cn2.apple-mapkit.com
+.cdn-cn3.apple-mapkit.com
+.cdn-cn4.apple-mapkit.com
+.gs-loc-cn.apple.com
+.gsp10-ssl-cn.ls.apple.com
+.gsp13-cn.ls.apple.com
+.gsp4-cn.ls.apple.com.edgekey.net.globalredir.akadns.net
+.gsp4-cn.ls.apple.com.edgekey.net
+.gsp4-cn.ls.apple.com
+.gsp5-cn.ls.apple.com
+.cl2-cn.apple.com
+.cl4-cn.apple.com
+.gsp85-cn-ssl.ls.apple.com
+.gspe19-cn-ssl.ls.apple.com
+.gspe19-cn.ls-apple.com.akadns.net
+.gspe19-cn.ls.apple.com
+.mesu-china.apple.com.akadns.net
+.images.apple.com
+.cdsassets.apple.com
+.cstat.apple.com
+################# END #################

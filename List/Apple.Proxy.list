@@ -1,12 +1,27 @@
-##############################
-# Apple Proxy Services
-#  解鎖iCloud、iCloud Private Relay、App Store、iMessage、Facetime、Testflight、iBooks、Podcasts、TV+、 Music、iTunes
+# NAME: Apple Proxy beta v0.2
+# UPDATED: 2024-01-23 02:59:39
+#  
+#  代理加速 iCloud、App Store、TV+、 Music、iTunes
+#  解鎖 iMessage、Facetime、iCloud Private Relay、Testflight、iBooks、Podcasts、News
+#  支持 DOMAIN-SET
+# 
 #  Source:
 #  https://support.apple.com/zh-tw/HT210060
-#! iCloud Private Relay
-#! https://developer.apple.com/cn/support/prepare-your-network-for-icloud-private-relay/
-#! https://mask-api.icloud.com/egress-ip-ranges.csv
-##############################
+#  https://developer.apple.com/cn/support/prepare-your-network-for-icloud-private-relay/
+#  https://mask-api.icloud.com/egress-ip-ranges.csv
+#----------------------------------------
+# news
+.apple.comscoreresearch.com
+.news-assets.apple.com
+.news-client-search.apple.com
+.news-client.apple.com
+.news-edge.apple.com
+.news-events.apple.com
+.apple.news
+
+USER-AGENT,AppleNews*
+USER-AGENT,com.apple.news*
+PROCESS-NAME,News
 
 #! > Unblock GeoServices
 .ls.apple.com
@@ -22,6 +37,14 @@
 # > Look Up (Only for Wikipedia@macOS, Surge Enhance Mode enabled required)
 .lookup-api.apple.com
 .e16991.b.akamaiedge.net
+# > Look Up (Only for Wikipedia@macOS, Surge Enhance Mode enabled required)
+PROCESS-NAME,LookupViewService
+PROCESS-NAME,/System/Library/PrivateFrameworks/Lookup.framework/Versions/A/XPCServices/LookupViewService.xpc/Contents/MacOS/LookupViewService
+
+# Apple Pay for J
+DOMAIN-KEYWORD,smp-device
+#USER-AGENT,passd*
+#USER-AGENT,Wallet*
 
 # > iCloud
 .gateway.icloud.com
@@ -82,8 +105,10 @@
 .configuration.apple.com
 
 #! > OCSP
-.ocsp.apple.com
-.ocsp2.apple.com
+#.ocsp.apple.com
+#.ocsp2.apple.com
+#! > OCSP
+#USER-AGENT,com.apple.trustd*
 
 #! > Asset Cache Locator Service
 .lcdn-locator.apple.com
@@ -117,6 +142,9 @@
 .tv.apple.com
 .tv.applemusic.com
 
+USER-AGENT,AppleTV*
+USER-AGENT,com.apple.tv*
+
 #! > Music
 .music.apple.com
 
@@ -144,4 +172,5 @@
 .www.apple.com
 
 .init-p01md.apple.com
+
 ########### END ############

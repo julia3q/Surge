@@ -1,32 +1,75 @@
-# NAME: Apple CN 手動整理版
-# UPDATED: 2024-01-23 02:59:39
+# NAME: Apple CN beta v0.2
+# UPDATED: 2024-01-25 11:59:39
 # 可以理解為哪些 Apple's domains 預設走 China（關閉的意思）.
 #
 #  Source:
-#  - https://github.com/felixonmars/dnsmasq-china-list
+#  https://github.com/geekdada/surge-list/blob/master/surgio-snippet/apple.tpl
+#  https://support.apple.com/en-us/HT210060
 #----------------------------------------
-.cn.apple.com
-.cn.ls.apple.com
-.cn-ssl.ls.apple.com
-.smoot.apple.cn
-.cdn-cn1.apple-mapkit.com
-.cdn-cn2.apple-mapkit.com
-.cdn-cn3.apple-mapkit.com
-.cdn-cn4.apple-mapkit.com
-.gs-loc-cn.apple.com
-.gsp10-ssl-cn.ls.apple.com
-.gsp13-cn.ls.apple.com
-.gsp4-cn.ls.apple.com.edgekey.net.globalredir.akadns.net
-.gsp4-cn.ls.apple.com.edgekey.net
-.gsp4-cn.ls.apple.com
-.gsp5-cn.ls.apple.com
-.cl2-cn.apple.com
-.cl4-cn.apple.com
-.gsp85-cn-ssl.ls.apple.com
-.gspe19-cn-ssl.ls.apple.com
-.gspe19-cn.ls-apple.com.akadns.net
-.gspe19-cn.ls.apple.com
-.mesu-china.apple.com.akadns.net
-.cdsassets.apple.com
-.cstat.apple.com
+## Apple CN domains
+DOMAIN,cn.apple.com
+DOMAIN,cn.ls.apple.com
+DOMAIN,cn-ssl.ls.apple.com
+DOMAIN,smoot.apple.cn
+DOMAIN,cdn-cn1.apple-mapkit.com
+DOMAIN,cdn-cn2.apple-mapkit.com
+DOMAIN,cdn-cn3.apple-mapkit.com
+DOMAIN,cdn-cn4.apple-mapkit.com
+DOMAIN,gs-loc-cn.apple.com
+DOMAIN,gsp10-ssl-cn.ls.apple.com
+DOMAIN,gsp13-cn.ls.apple.com
+DOMAIN,gsp4-cn.ls.apple.com.edgekey.net.globalredir.akadns.net
+DOMAIN,gsp4-cn.ls.apple.com.edgekey.net
+DOMAIN,gsp4-cn.ls.apple.com
+DOMAIN,gsp5-cn.ls.apple.com
+DOMAIN,cl2-cn.apple.com
+DOMAIN,cl4-cn.apple.com
+DOMAIN,gsp85-cn-ssl.ls.apple.com
+DOMAIN,gspe19-cn-ssl.ls.apple.com
+DOMAIN,gspe19-cn.ls-apple.com.akadns.net
+DOMAIN,gspe19-cn.ls.apple.com
+DOMAIN,mesu-china.apple.com.akadns.net
+DOMAIN,cdsassets.apple.com
+DOMAIN,cstat.apple.com
+
+## Apple Global CDN
+## iOS App Store
+DOMAIN,iosapps.itunes.apple.com
+USER-AGENT,com.apple.appstored*
+## Mac App Store
+DOMAIN,osxapps.itunes.apple.com
+DOMAIN,oscdn.apple.com
+# PROCESS-NAME,storedownloadd
+## Update
+DOMAIN,supportdownload.apple.com
+## Update
+DOMAIN,appldnld.apple.com
+## Update
+DOMAIN,swcdn.apple.com
+DOMAIN,apptrailers.itunes.apple.com
+DOMAIN,updates-http.cdn-apple.com
+DOMAIN,updates.cdn-apple.com
+## App Store & iTunes Images
+DOMAIN-SUFFIX,mzstatic.com
+## Apple Music Streaming
+DOMAIN,aod.itunes.apple.com
+DOMAIN,mvod.itunes.apple.com
+DOMAIN,streamingaudio.itunes.apple.com
+## Other
+DOMAIN,download.developer.apple.com
+DOMAIN,downloaddispatch.itunes.apple.com
+DOMAIN,app-site-association.cdn-apple.com
+
+#Apple Push Notification Service Apple 推送通知 - 當使用 Apple 推送通知服務 (APNS) 時，Apple 設備需要訪問以下主機。
+DOMAIN-SUFFIX, push.apple.com //推送通知
+DOMAIN, identity.apple.com //APNs 证书请求门户
+IP-CIDR, 17.249.0.0/16, no-resolve
+IP-CIDR, 17.252.0.0/16, no-resolve
+IP-CIDR, 17.57.144.0/22, no-resolve
+IP-CIDR, 17.188.128.0/18, no-resolve
+IP-CIDR, 17.188.20.0/23, no-resolve
+IP-CIDR6, 2620:149:a44::/48, no-resolve
+IP-CIDR6, 2403:300:a42::/48, no-resolve
+IP-CIDR6, 2403:300:a51::/48, no-resolve
+IP-CIDR6, 2a01:b740:a42::/48, no-resolve
 ################# END #################

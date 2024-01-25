@@ -1,5 +1,5 @@
-# NAME: Apple Proxy beta v0.2
-# UPDATED: 2024-01-23 02:59:39
+# NAME: Apple Proxy beta v0.3
+# UPDATED: 2024-01-25 13:01:39
 #  
 #  代理加速 iCloud、App Store、TV+、 Music、iTunes
 #  解鎖 iMessage、Facetime、iCloud Private Relay、Testflight、iBooks、Podcasts、News
@@ -9,22 +9,21 @@
 #  https://support.apple.com/zh-tw/HT210060
 #  https://developer.apple.com/cn/support/prepare-your-network-for-icloud-private-relay/
 #  https://mask-api.icloud.com/egress-ip-ranges.csv
+#  https://github.com/geekdada/surge-list/blob/master/surgio-snippet/apple.tpl
 #----------------------------------------
-# news
-.apple.comscoreresearch.com
-.news-assets.apple.com
-.news-client-search.apple.com
-.news-client.apple.com
-.news-edge.apple.com
-.news-events.apple.com
-.apple.news
-
-USER-AGENT,AppleNews*
-USER-AGENT,com.apple.news*
-PROCESS-NAME,News
+#! > cdn
+.cdn-apple.com
+.cdn.apple-cloudkit.com
+.apple.com.edgekey.net
+.apple.com.akadns.net
+.apple.com.edgekey.net.globalredir.akadns.net
+.origin-apple.com.akadns.net
+.push-apple.com.akadns.net
 
 #! > Unblock GeoServices
+.gspe1-ssl.ls.apple.com
 .ls.apple.com
+
 #! > Unblock
 .smoot.apple.com
 .apple-cloudkit.com
@@ -34,12 +33,6 @@ PROCESS-NAME,News
 .digicert.com
 .apple-livephotoskit.com
 
-# > Look Up (Only for Wikipedia@macOS, Surge Enhance Mode enabled required)
-.lookup-api.apple.com
-.e16991.b.akamaiedge.net
-# > Look Up (Only for Wikipedia@macOS, Surge Enhance Mode enabled required)
-PROCESS-NAME,LookupViewService
-PROCESS-NAME,/System/Library/PrivateFrameworks/Lookup.framework/Versions/A/XPCServices/LookupViewService.xpc/Contents/MacOS/LookupViewService
 
 # Apple Pay for J
 DOMAIN-KEYWORD,smp-device
@@ -57,13 +50,8 @@ DOMAIN-KEYWORD,smp-device
 .comconvertkit-mail2.com
 .mail.me.com
 
-#! > iTunes
-.itunes.apple.com
-.mzstatic.com
-.mesu.apple.com
-
 #! > App Store
-.xp.apple.com
+#.xp.apple.com
 .apps.apple.com
 .appstore.com
 .store.apple.com
@@ -122,21 +110,25 @@ DOMAIN-KEYWORD,smp-device
 .reserve-prime.apple.com
 
 #! > 推送
-.push.apple.com
-.gateway.sandbox.push.apple.com
+#.push.apple.com
+#.gateway.sandbox.push.apple.com
 #.gateway.push.apple.com
 
-#! > cdn
-.cdn-apple.com
-.cdn.apple-cloudkit.com
-.apple.com.edgekey.net
-.apple.com.akadns.net
-.apple.com.edgekey.net.globalredir.akadns.net
-.origin-apple.com.akadns.net
-.push-apple.com.akadns.net
-#DOMAIN,aaplimg.com
-#.g.aaplimg.com
-#.v.aaplimg.com
+#! > iTunes
+#.itunes.apple.com
+.mzstatic.com
+.mesu.apple.com
+## Trailer
+.hls.itunes.apple.com
+## Movie Stream
+.hls-amt.itunes.apple.com
+.bag.itunes.apple.com
+.play.itunes.apple.com
+.se.itunes.apple.com
+.se-edge.itunes.apple.com
+.su.itunes.apple.com
+.upp.itunes.apple.com
+.itunes-apple.com.akadns.net
 
 #! > TV+
 .tv.apple.com
@@ -146,7 +138,10 @@ USER-AGENT,AppleTV*
 USER-AGENT,com.apple.tv*
 
 #! > Music
-.music.apple.com
+#.music.apple.com
+.js-cdn.music.apple.com
+.audio-ssl.itunes.apple.com
+beta.music.apple.com
 
 # > testflight
 .testflight.apple.com
@@ -158,19 +153,37 @@ USER-AGENT,com.apple.tv*
 .player.soundon.fm
 .podcasts.apple.com
 
+# > Developer
+.developer.apple.com
+.devimages-cdn.apple.com
+.devstreaming-cdn.apple.com
+.init-p01md.apple.com
+.www.apple.com
+
+#---- test
+
+
+# 解鎖 news
+.apple.comscoreresearch.com
+.news-assets.apple.com
+.news-client-search.apple.com
+.news-client.apple.com
+.news-edge.apple.com
+.news-events.apple.com
+.apple.news
+
+USER-AGENT,AppleNews*
+USER-AGENT,com.apple.news*
+PROCESS-NAME,News
+
+
 # > 驗證
 # 家庭共享
 .pancake.apple.com
 
-.ipcdn.apple.com
-.iphone-ld.apple.com
-
-# > 支援
-.developer.apple.com
-#.support.apple.com
-#.help.apple.com
-.www.apple.com
-
-.init-p01md.apple.com
-
-########### END ############
+# > Look Up (Only for Wikipedia@macOS, Surge Enhance Mode enabled required)
+.lookup-api.apple.com
+.e16991.b.akamaiedge.net
+# > Look Up (Only for Wikipedia@macOS, Surge Enhance Mode enabled required)
+PROCESS-NAME,LookupViewService
+PROCESS-NAME,/System/Library/PrivateFrameworks/Lookup.framework/Versions/A/XPCServices/LookupViewService.xpc/Contents/MacOS/LookupViewService

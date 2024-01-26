@@ -1,15 +1,15 @@
 # > Software
-DOMAIN-SUFFIX,themoviedb.org
-DOMAIN-SUFFIX,rsshub.app
+.themoviedb.org
+.rsshub.app
 
 # > Surge Modules
-DOMAIN,boxjs.com
-DOMAIN-SUFFIX,vercel.app
+.boxjs.com
+.vercel.app
 
 # > iOS
-#DOMAIN-SUFFIX,mdes.mastercard.com
-#DOMAIN-SUFFIX,vntsnotificationservice.visa.com
-DOMAIN-SUFFIX,hushed.com
+#.mdes.mastercard.com
+#.vntsnotificationservice.visa.com
+.hushed.com
 
 # > macOS
 

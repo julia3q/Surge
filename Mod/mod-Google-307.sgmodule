@@ -1,5 +1,6 @@
 #!name=GoogleCN 307轉跳
 #!desc=將 google.cn google.hk 的(Google Search/Maps)請求,轉跳到 google.com 
+#!category=網路服務
 
 [URL Rewrite]
 # Redirect Google Search Service

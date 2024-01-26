@@ -1,10 +1,10 @@
 # NAME: Apple Proxy beta v0.3
 # UPDATED: 2024-01-25 13:01:39
-#  
+#
 #  代理加速 iCloud、App Store、TV+、 Music、iTunes
 #  解鎖 iMessage、Facetime、iCloud Private Relay、Testflight、iBooks、Podcasts、News
 #  支持 DOMAIN-SET
-# 
+#
 #  Source:
 #  https://support.apple.com/zh-tw/HT210060
 #  https://developer.apple.com/cn/support/prepare-your-network-for-icloud-private-relay/
@@ -18,7 +18,7 @@
 .apple.com.akadns.net
 .apple.com.edgekey.net.globalredir.akadns.net
 .origin-apple.com.akadns.net
-.push-apple.com.akadns.net
+#.push-apple.com.akadns.net
 
 #! > Unblock GeoServices
 .gspe1-ssl.ls.apple.com
@@ -33,12 +33,6 @@
 .digicert.com
 .apple-livephotoskit.com
 
-
-# Apple Pay for J
-DOMAIN-KEYWORD,smp-device
-#USER-AGENT,passd*
-#USER-AGENT,Wallet*
-
 # > iCloud
 .gateway.icloud.com
 .icloud-content.com
@@ -51,7 +45,6 @@ DOMAIN-KEYWORD,smp-device
 .mail.me.com
 
 #! > App Store
-#.xp.apple.com
 .apps.apple.com
 .appstore.com
 .store.apple.com
@@ -86,17 +79,11 @@ DOMAIN-KEYWORD,smp-device
 .gsa.apple.com
 
 #! > Mac OS 的 App Store 服务器
-.swscan.apple.com
-.swquery.apple.com
+#.swscan.apple.com
+#.swquery.apple.com
 
 #! > macOS Rosetta 2 更新
 .configuration.apple.com
-
-#! > OCSP
-#.ocsp.apple.com
-#.ocsp2.apple.com
-#! > OCSP
-#USER-AGENT,com.apple.trustd*
 
 #! > Asset Cache Locator Service
 .lcdn-locator.apple.com
@@ -104,15 +91,11 @@ DOMAIN-KEYWORD,smp-device
 #! > Caching Server Registration macOS
 .lcdn-registration.apple.com
 .suconfig.apple.com
-.xp-cdn.apple.com
+#.xp-cdn.apple.com
 
 #! > Reserve
 .reserve-prime.apple.com
 
-#! > 推送
-#.push.apple.com
-#.gateway.sandbox.push.apple.com
-#.gateway.push.apple.com
 
 #! > iTunes
 #.itunes.apple.com
@@ -159,8 +142,6 @@ beta.music.apple.com
 .devstreaming-cdn.apple.com
 .init-p01md.apple.com
 .www.apple.com
-
-#---- test
 
 
 # 解鎖 news

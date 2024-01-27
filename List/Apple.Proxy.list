@@ -79,8 +79,8 @@
 .gsa.apple.com
 
 #! > Mac OS 的 App Store 服务器
-#.swscan.apple.com
-#.swquery.apple.com
+.swscan.apple.com
+.swquery.apple.com
 
 #! > macOS Rosetta 2 更新
 .configuration.apple.com

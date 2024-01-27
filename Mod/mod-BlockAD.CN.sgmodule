@@ -1,5 +1,5 @@
 #!name=BlockAD-CN
-#!desc=CN 環境去除廣告。［手動維護］v2024.1.23
+#!desc=CN 環境去除廣告。［手動維護］v2024.1.26
 #!category=阻擋廣告整合
 
 [Rule]
@@ -17,9 +17,8 @@ DOMAIN,wxsmsdy.video.qq.com,REJECT
 DOMAIN,wxsnsdythumb.wxs.qq.com,REJECT
 
 #CNend---
-#! 通用去廣告
 
-#! stop,跳转
+#! 通用去廣告
 DOMAIN-KEYWORD,app-site.association,REJECT
 DOMAIN-SUFFIX,ad.ettoday.net,DIRECT
 DOMAIN,sessions.bugsnag.com,REJECT-DROP

@@ -11,10 +11,60 @@ DOMAIN-SUFFIX,gz-data.com,REJECT
 DOMAIN-SUFFIX,log.aliyuncs.com,REJECT
 DOMAIN-SUFFIX,log.mmstat.com,REJECT
 
+# 中国电信
+DOMAIN,ad.21cn.com,REJECT
+DOMAIN,ad.k.21cn.com,REJECT
+DOMAIN,admarket.21cn.com,REJECT
+DOMAIN,adshows.21cn.com,REJECT
+IP-CIDR,122.229.8.47/32,REJECT
+IP-CIDR,122.229.29.89/32,REJECT
+
+# 美团
+DOMAIN,al-log.d.meituan.net,REJECT
+DOMAIN,babel-statistics-android.d.meituan.net,REJECT
+DOMAIN,maplocatesdksnapshot.d.meituan.net,REJECT
+DOMAIN,metrics-picture.d.meituan.net,REJECT
+DOMAIN,route-stats.d.meituan.net,REJECT
+
 #! 微信小程序去广告
 DOMAIN,wxsnsdy.wxs.qq.com,REJECT
 DOMAIN,wxsmsdy.video.qq.com,REJECT
 DOMAIN,wxsnsdythumb.wxs.qq.com,REJECT
+
+# 阿里巴巴
+DOMAIN,ossgw.alicdn.com,REJECT
+DOMAIN,ems.youku.com,REJECT
+DOMAIN,hudong.alicdn.com,REJECT
+DOMAIN-SUFFIX,ut.taobao.com,REJECT
+
+# 腾讯
+DOMAIN,adsmind.gdtimg.com,REJECT
+DOMAIN,info4.video.qq.com,REJECT
+DOMAIN,info6.video.qq.com,REJECT
+DOMAIN,ios.video.mpush.qq.com,REJECT
+DOMAIN,otheve.beacon.qq.com,REJECT
+DOMAIN,pgdt.gtimg.cn,REJECT
+DOMAIN,tmead.y.qq.com,REJECT-NO-DROP
+DOMAIN,tmeadbak.y.qq.com,REJECT
+DOMAIN,tmeadcomm.y.qq.com,REJECT
+DOMAIN,tpns.qq.com,REJECT
+DOMAIN-SUFFIX,gdt.qq.com,REJECT
+DOMAIN-SUFFIX,l.qq.com,REJECT
+DOMAIN-KEYWORD,trace.qq.com,REJECT
+DOMAIN-KEYWORD,trace.video.qq.com,REJECT
+IP-CIDR,47.110.187.87/32,REJECT
+
+# 字节跳动 - 广告服务商
+DOMAIN,ad.zijieapi.com,REJECT
+DOMAIN,i.snssdk.com,REJECT
+DOMAIN,is.snssdk.com,REJECT
+DOMAIN-KEYWORD,-ad-sign.byteimg.com,REJECT
+DOMAIN-KEYWORD,-tos.pstatp.com,REJECT-DROP
+DOMAIN-KEYWORD,asiad.byteactivity,REJECT
+DOMAIN-KEYWORD,pangolin.snssdk.com,REJECT
+DOMAIN-KEYWORD,pangolin-sdk-toutiao,REJECT
+DOMAIN-KEYWORD,pglstatp-toutiao,REJECT
+DOMAIN-KEYWORD,video-cn.snssdk.com,REJECT
 
 #CNend---
 
@@ -97,5 +147,3 @@ DOMAIN,m.vpon.com,REJECT
 DOMAIN-SUFFIX,admob.com,REJECT
 DOMAIN-SUFFIX,flurry.com,REJECT
 DOMAIN-SUFFIX,mopub.com,REJECT
-DOMAIN-SET,https://anti-ad.net/surge2.txt,REJECT
-

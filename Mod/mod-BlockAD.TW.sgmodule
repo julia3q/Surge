@@ -1,5 +1,5 @@
 #!name=BlockAD-TW
-#!desc=TW 環境去除廣告。［手動維護］v2024.01.26
+#!desc=TW 環境去除廣告。［手動維護］v2024.02.16
 #!category=阻擋廣告整合
 
 
@@ -37,7 +37,7 @@ URL-REGEX,^https:\/\/uts-front\.line-apps\.com\/event$,REJECT-DROP
 URL-REGEX,^https:\/\/uts-front\.line-apps\.com\/settings$,REJECT-DROP
 URL-REGEX,^https:\/\/static\.line-scdn\.net\/ad-sdk\/,REJECT
 URL-REGEX,^https:\/\/nelo2-col\.linecorp\.com\/_store$,REJECT
-URL-REGEX,^https:\/\/gw\.line\.naver\.jp\/PUSH\/1\/subs.*$,REJECT-DROP
+
 
 #擋錢包頁中間的橫幅
 URL-REGEX,^https:\/\/vos\.line-scdn\.net\/wallet\/banner\/WalletTab_Middle,REJECT

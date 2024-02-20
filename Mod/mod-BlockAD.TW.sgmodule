@@ -6,9 +6,9 @@
 [Rule]
 #! Line 廣告
 #! 白名單
-URL-REGEX,^https:\/\/obs\.line-scdn\.net\/r,DIRECT
-URL-REGEX,^https:\/\/obs-tw\.line-apps\.com\/talk,DIRECT
-DOMAIN,stickershop.line-scdn.net,DIRECT
+#URL-REGEX,^https:\/\/obs\.line-scdn\.net\/r,DIRECT
+#URL-REGEX,^https:\/\/obs-tw\.line-apps\.com\/talk,DIRECT
+#DOMAIN,stickershop.line-scdn.net,DIRECT
 
 #! jkg：https://raw.githubusercontent.com/jkgtw/Surge/master/Modules/LINE-ADs.sgmodule
 URL-REGEX,^https:\/\/a\.line\.me\/er\/lads\/v\d\/ei\?,REJECT-DROP
@@ -37,7 +37,6 @@ URL-REGEX,^https:\/\/uts-front\.line-apps\.com\/event$,REJECT-DROP
 URL-REGEX,^https:\/\/uts-front\.line-apps\.com\/settings$,REJECT-DROP
 URL-REGEX,^https:\/\/static\.line-scdn\.net\/ad-sdk\/,REJECT
 URL-REGEX,^https:\/\/nelo2-col\.linecorp\.com\/_store$,REJECT
-
 
 #擋錢包頁中間的橫幅
 URL-REGEX,^https:\/\/vos\.line-scdn\.net\/wallet\/banner\/WalletTab_Middle,REJECT

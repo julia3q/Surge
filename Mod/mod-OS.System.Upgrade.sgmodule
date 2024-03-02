@@ -1,7 +1,6 @@
 #!name=Block OS Upgrade
-#!desc=阻擋 OS 系統升級
-#!category=Apple OS
-
+#!desc=阻斷 AppleOS 系統升級
+#!category=Apple系列
 
 [Rule]
 USER-AGENT,MobileAsset*,DIRECT

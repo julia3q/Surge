@@ -1,6 +1,6 @@
 #!name=BlockAD-TWPlus
 #!desc=［行動網路模式時自動啟動］CN 環境去除廣告。
-#!category=阻擋廣告整合
+#!category=阻斷廣告
 #!system=ios
 
 [Rule]

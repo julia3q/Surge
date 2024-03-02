@@ -1,6 +1,7 @@
 #!name=macOS Gateway Direct
 #!desc= 🖥️ macOS版 gateway Direct
 #!system=mac
+#!category=macOS
 
 [Rule]
 # gateway Direct

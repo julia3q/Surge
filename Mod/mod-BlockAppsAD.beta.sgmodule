@@ -1,8 +1,7 @@
 #!name=BlockAD-Apps.Beta
-#!desc=去除 CN Apps 各種腦人的廣告。［自用-手動維護］v2024.1.31
-#!author=Julia
+#!desc=去除 CN Apps 各種腦人的廣告。［手動維護］v2024.1.31
 #!system=ios
-#!category=阻擋廣告整合
+#!category=阻斷Apps廣告
 
 [URL Rewrite]
 # > 深圳通

@@ -2,7 +2,7 @@
 #!desc=TW 環境去除廣告。［手動維護］v2024.02.16
 #!category=阻斷廣告
 
-# 🔗 其他LineBKAD模块链接 https://raw.githubusercontent.com/jkgtw/Surge/master/Modules/LINE-ADs.sgmodule
+# 🔗 其他LineAD模块for iOS链接:https://raw.githubusercontent.com/jkgtw/Surge/master/Modules/LINE-ADs.sgmodule
 
 [Rule]
 #! Line 錢包頁中間的橫幅

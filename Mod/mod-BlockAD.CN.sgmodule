@@ -4,7 +4,7 @@
 
 [Rule]
 #! 誤殺放行
-#RULE-SET,list/AD.Direct.list,DIRECT
+RULE-SET,https://raw.githubusercontent.com/julia3q/Surge/main/List/AD.Direct.list,DIRECT
 
 #! 通用去廣告
 DOMAIN-KEYWORD,app-site.association,REJECT

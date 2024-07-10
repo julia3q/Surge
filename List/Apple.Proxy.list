@@ -1,6 +1,5 @@
-# NAME: Apple Proxy beta v0.3
+# NAME: Apple Proxy beta v0.8
 # UPDATED: 2024-07-10 13:17
-
 # 支持 DOMAIN-SET
 #  代理加速 iCloud、App Store、TV+、Music、iTunes
 #  解鎖 iMessage、Facetime、iCloud Private Relay、Testflight、iBooks、Podcasts、News
@@ -101,7 +100,7 @@ USER-AGENT,com.apple.tv*
 #.music.apple.com
 .js-cdn.music.apple.com
 .audio-ssl.itunes.apple.com
-beta.music.apple.com
+.beta.music.apple.com
 
 # > testflight
 .testflight.apple.com

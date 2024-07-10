@@ -1,6 +1,6 @@
-# NAME: Apple Proxy beta v0.8
-# UPDATED: 2024-07-10 13:17
-# 支持 DOMAIN-SET
+# NAME: Apple Proxy beta v0.9
+# UPDATED: 2024-07-10 14:08
+
 #  代理加速 iCloud、App Store、TV+、Music、iTunes
 #  解鎖 iMessage、Facetime、iCloud Private Relay、Testflight、iBooks、Podcasts、News
 #  
@@ -14,87 +14,86 @@
 #----------------------------------------
 
 # > iCloud
-.icloud.com
-.icloud-content.com
-.icloud.apple.com
+DOMAIN-SUFFIX,icloud.com
+DOMAIN-SUFFIX,icloud-content.com
+DOMAIN-SUFFIX,icloud.apple.com
 
 # > Mail
-.mail.me.com
-.me.com
-.comconvertkit-mail2.com
+DOMAIN-SUFFIX,mail.me.com
+DOMAIN-SUFFIX,me.com
+DOMAIN-SUFFIX,comconvertkit-mail2.com
 
 #! > App Store
-.apps.apple.com
-.appstore.com
-.store.apple.com
-.blobstore.apple.com
+DOMAIN-SUFFIX,apps.apple.com
+DOMAIN-SUFFIX,appstore.com
+DOMAIN-SUFFIX,store.apple.com
+DOMAIN-SUFFIX,blobstore.apple.com
 
 #! > iCloud Private Relay
 #Allow for network traffic audits
-.mask.icloud.com
-.mask.apple-dns.net
-.mask-canary.icloud.com
-.canary.mask.apple-dns.net
-.mask-h2.icloud.com
-.mask-t.apple-dns.net
+DOMAIN-SUFFIX,mask.icloud.com
+DOMAIN-SUFFIX,mask.apple-dns.net
+DOMAIN-SUFFIX,mask-canary.icloud.com
+DOMAIN-SUFFIX,canary.mask.apple-dns.net
+DOMAIN-SUFFIX,mask-h2.icloud.com
+DOMAIN-SUFFIX,mask-t.apple-dns.net
 
 #! > Beta 版更新項目
-.bpapi.apple.com
+DOMAIN-SUFFIX,bpapi.apple.com
 
 #! > Apple URL Shortener
-.apple.co
+DOMAIN-SUFFIX,apple.co
 
 # > iMessage 和 Facetime 服务器
-.ess.apple.com
+DOMAIN-SUFFIX,ess.apple.com
 
 #! > locationd
-.gs-loc.apple.com
-.lcdn-locator.apple.com
+DOMAIN-SUFFIX,gs-loc.apple.com
+DOMAIN-SUFFIX,lcdn-locator.apple.com
 
 #! > Region
-.service.gc.apple.com
-.appleid.apple.com
-.gc.apple.com
-.gsa.apple.com
+DOMAIN-SUFFIX,service.gc.apple.com
+DOMAIN-SUFFIX,appleid.apple.com
+DOMAIN-SUFFIX,gc.apple.com
+DOMAIN-SUFFIX,gsa.apple.com
 
 #! > Mac OS 的 App Store 服务器
-.swscan.apple.com
-.swquery.apple.com
+DOMAIN-SUFFIX,swscan.apple.com
+DOMAIN-SUFFIX,swquery.apple.com
 
 #! > macOS Rosetta 2 更新
-.configuration.apple.com
+DOMAIN-SUFFIX,configuration.apple.com
 
 #! > Asset Cache Locator Service
-.lcdn-locator.apple.com
+DOMAIN-SUFFIX,lcdn-locator.apple.com
 
 #! > Caching Server Registration macOS
-.lcdn-registration.apple.com
-.suconfig.apple.com
+DOMAIN-SUFFIX,lcdn-registration.apple.com
+DOMAIN-SUFFIX,suconfig.apple.com
 #.xp-cdn.apple.com
 
 
 #! > iTunes
 #.itunes.apple.com
-.mzstatic.com
-.mesu.apple.com
+DOMAIN-SUFFIX,mzstatic.com
+DOMAIN-SUFFIX,mesu.apple.com
+
 ## Trailer
-.hls.itunes.apple.com
+DOMAIN-SUFFIX,hls.itunes.apple.com
+
 ## Movie Stream
-.hls-amt.itunes.apple.com
-.bag.itunes.apple.com
-.play.itunes.apple.com
-.se.itunes.apple.com
-.se-edge.itunes.apple.com
-.su.itunes.apple.com
-.upp.itunes.apple.com
-.itunes-apple.com.akadns.net
+DOMAIN-SUFFIX,hls-amt.itunes.apple.com
+DOMAIN-SUFFIX,bag.itunes.apple.com
+DOMAIN-SUFFIX,play.itunes.apple.com
+DOMAIN-SUFFIX,se.itunes.apple.com
+DOMAIN-SUFFIX,se-edge.itunes.apple.com
+DOMAIN-SUFFIX,su.itunes.apple.com
+DOMAIN-SUFFIX,upp.itunes.apple.com
+DOMAIN-SUFFIX,itunes-apple.com.akadns.net
 
 #! > TV+
-.tv.apple.com
-.tv.applemusic.com
-
-USER-AGENT,AppleTV*
-USER-AGENT,com.apple.tv*
+DOMAIN-SUFFIX,tv.apple.com
+DOMAIN-SUFFIX,tv.applemusic.com
 
 #! > Music
 #.music.apple.com
@@ -103,58 +102,62 @@ USER-AGENT,com.apple.tv*
 .beta.music.apple.com
 
 # > testflight
-.testflight.apple.com
+DOMAIN-SUFFIX,testflight.apple.com
 
 # iBooks
-.books.apple.com
+DOMAIN-SUFFIX,books.apple.com
 
 # Podcasts
-.player.soundon.fm
-.podcasts.apple.com
+DOMAIN-SUFFIX,player.soundon.fm
+DOMAIN-SUFFIX,podcasts.apple.com
 
 # > Developer
-.developer.apple.com
-.devimages-cdn.apple.com
-.devstreaming-cdn.apple.com
-.init-p01md.apple.com
-.www.apple.com
+DOMAIN-SUFFIX,developer.apple.com
+DOMAIN-SUFFIX,devimages-cdn.apple.com
+DOMAIN-SUFFIX,devstreaming-cdn.apple.com
+DOMAIN-SUFFIX,init-p01md.apple.com
+DOMAIN-SUFFIX,www.apple.com
 
 #! > Unblock GeoServices
-.gspe1-ssl.ls.apple.com
+DOMAIN-SUFFIX,gspe1-ssl.ls.apple.com
 #.ls.apple.com
 
 #! > Unblock
-.smoot.apple.com
-.apple-cloudkit.com
-.apple-mapkit.com
-.apple-dns.net
-.guzzoni.apple.com
-.digicert.com
-.apple-livephotoskit.com
+DOMAIN-SUFFIX,smoot.apple.com
+DOMAIN-SUFFIX,apple-cloudkit.com
+DOMAIN-SUFFIX,apple-mapkit.com
+DOMAIN-SUFFIX,apple-dns.net
+DOMAIN-SUFFIX,guzzoni.apple.com
+DOMAIN-SUFFIX,digicert.com
+DOMAIN-SUFFIX,apple-livephotoskit.com
 
 # Unblock news
-.apple.comscoreresearch.com
-.news-assets.apple.com
-.news-client-search.apple.com
-.news-client.apple.com
-.news-edge.apple.com
-.news-events.apple.com
-.apple.news
+DOMAIN-SUFFIX,apple.comscoreresearch.com
+DOMAIN-SUFFIX,news-assets.apple.com
+DOMAIN-SUFFIX,news-client-search.apple.com
+DOMAIN-SUFFIX,news-client.apple.com
+DOMAIN-SUFFIX,news-edge.apple.com
+DOMAIN-SUFFIX,news-events.apple.com
+DOMAIN-SUFFIX,apple.news
 
 
 # > 驗證
 # 家庭共享
-.pancake.apple.com
+DOMAIN-SUFFIX,pancake.apple.com
 
 # > Look Up (Only for Wikipedia@macOS, Surge Enhance Mode enabled required)
-.lookup-api.apple.com
-.e16991.b.akamaiedge.net
+DOMAIN-SUFFIX,lookup-api.apple.com
+DOMAIN-SUFFIX,e16991.b.akamaiedge.net
+
 # > Look Up (Only for Wikipedia@macOS, Surge Enhance Mode enabled required)
 PROCESS-NAME,LookupViewService
 PROCESS-NAME,/System/Library/PrivateFrameworks/Lookup.framework/Versions/A/XPCServices/LookupViewService.xpc/Contents/MacOS/LookupViewService
 
 USER-AGENT,AppleNews*
 USER-AGENT,com.apple.news*
+USER-AGENT,AppleTV*
+USER-AGENT,com.apple.tv*
+
 PROCESS-NAME,News
 PROCESS-NAME,trustd
 PROCESS-NAME,netbiosd

@@ -10,66 +10,13 @@
 #  https://developer.apple.com/cn/support/prepare-your-network-for-icloud-private-relay/
 #  https://mask-api.icloud.com/egress-ip-ranges.csv
 #  https://github.com/geekdada/surge-list/blob/master/surgio-snippet/apple.tpl
+#  https://ruleset.skk.moe/List/non_ip/apple_services.conf
 #----------------------------------------
-#########################################
-# Sukka's Ruleset - Apple Domains
-# Last Updated: 2024-04-03T16:26:20.353Z
-# Size: 30
-# License: AGPL 3.0
-# Homepage: https://ruleset.skk.moe
-# GitHub: https://github.com/SukkaW/Surge
-#
-# This file contains domains of Apple, Inc.
-#########################################
-DOMAIN,api.smoot.apple.cn
-DOMAIN-SUFFIX,aaplimg.com
-DOMAIN-SUFFIX,apple-dns.net
-DOMAIN-SUFFIX,apple.co
-DOMAIN-SUFFIX,apple.com
-DOMAIN-SUFFIX,apple.com.cn
-DOMAIN-SUFFIX,appstore.com
-DOMAIN-SUFFIX,cdn-apple.com
-DOMAIN-SUFFIX,crashlytics.com
-DOMAIN-SUFFIX,icloud.com
-DOMAIN-SUFFIX,icloud-content.com
-DOMAIN-SUFFIX,me.com
-DOMAIN-SUFFIX,organicfruitapps.com
-DOMAIN-SUFFIX,apple-cloudkit.com
-DOMAIN-SUFFIX,apple-mapkit.com
-DOMAIN-SUFFIX,appsto.re
-DOMAIN-SUFFIX,itunes.com
-DOMAIN-SUFFIX,apple.news
-DOMAIN-SUFFIX,push-apple.com.akadns.net
-PROCESS-NAME,trustd
-PROCESS-NAME,netbiosd
-PROCESS-NAME,com.apple.geod
-PROCESS-NAME,mapspushd
-PROCESS-NAME,com.apple.Maps
-PROCESS-NAME,apsd
-PROCESS-NAME,fmfd
-PROCESS-NAME,findmydevice-user-agent
-PROCESS-NAME,CoreLocationAgent
-PROCESS-NAME,WeatherWidget
-################## EOF ##################
-
-#! > Unblock GeoServices
-.gspe1-ssl.ls.apple.com
-.ls.apple.com
-
-#! > Unblock
-.smoot.apple.com
-.apple-cloudkit.com
-.apple-mapkit.com
-.apple-dns.net
-.guzzoni.apple.com
-.digicert.com
-.apple-livephotoskit.com
 
 # > iCloud
-.gateway.icloud.com
+.icloud.com
 .icloud-content.com
 .icloud.apple.com
-.setup.icloud.com
 
 # > Mail
 .mail.me.com
@@ -125,9 +72,6 @@ PROCESS-NAME,WeatherWidget
 .suconfig.apple.com
 #.xp-cdn.apple.com
 
-#! > Reserve
-.reserve-prime.apple.com
-
 
 #! > iTunes
 #.itunes.apple.com
@@ -175,8 +119,20 @@ beta.music.apple.com
 .init-p01md.apple.com
 .www.apple.com
 
+#! > Unblock GeoServices
+.gspe1-ssl.ls.apple.com
+#.ls.apple.com
 
-# 解鎖 news
+#! > Unblock
+.smoot.apple.com
+.apple-cloudkit.com
+.apple-mapkit.com
+.apple-dns.net
+.guzzoni.apple.com
+.digicert.com
+.apple-livephotoskit.com
+
+# Unblock news
 .apple.comscoreresearch.com
 .news-assets.apple.com
 .news-client-search.apple.com
@@ -184,10 +140,6 @@ beta.music.apple.com
 .news-edge.apple.com
 .news-events.apple.com
 .apple.news
-
-USER-AGENT,AppleNews*
-USER-AGENT,com.apple.news*
-PROCESS-NAME,News
 
 
 # > 驗證
@@ -200,3 +152,17 @@ PROCESS-NAME,News
 # > Look Up (Only for Wikipedia@macOS, Surge Enhance Mode enabled required)
 PROCESS-NAME,LookupViewService
 PROCESS-NAME,/System/Library/PrivateFrameworks/Lookup.framework/Versions/A/XPCServices/LookupViewService.xpc/Contents/MacOS/LookupViewService
+
+USER-AGENT,AppleNews*
+USER-AGENT,com.apple.news*
+PROCESS-NAME,News
+PROCESS-NAME,trustd
+PROCESS-NAME,netbiosd
+PROCESS-NAME,com.apple.geod
+PROCESS-NAME,mapspushd
+PROCESS-NAME,com.apple.Maps
+PROCESS-NAME,apsd
+PROCESS-NAME,fmfd
+PROCESS-NAME,findmydevice-user-agent
+PROCESS-NAME,CoreLocationAgent
+PROCESS-NAME,WeatherWidget

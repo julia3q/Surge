@@ -1,8 +1,0 @@
-#!name=BlockAD-CNPlus
-#!desc=［行動網路模式時自動啟動］CN 環境去除廣告。
-#!category=阻斷廣告
-#!system=ios
-
-[Script]
-AutoADCN = type=event,event-name=network-changed,script-path=https://raw.githubusercontent.com/julia3q/Surge/main/Mod/mod-AutoBlock.CN.js,script-update-interval=604800
-

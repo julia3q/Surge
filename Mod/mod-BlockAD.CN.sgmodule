@@ -5,6 +5,7 @@
 [Rule]
 #! 誤殺放行
 RULE-SET,https://raw.githubusercontent.com/julia3q/Surge/main/List/AD.Direct.list,DIRECT
+RULE-SET,https://raw.githubusercontent.com/julia3q/Surge/main/List/AD.ProxyforApple.list,🍎 Apple
 
 #! 通用去廣告
 DOMAIN-KEYWORD,app-site.association,REJECT

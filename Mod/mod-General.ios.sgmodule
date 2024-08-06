@@ -1,6 +1,6 @@
-#!name=Gateway General(macOS)
-#!desc= 網關 General v24.8.6
-#!system=mac
+#!name=General(iOS)
+#!desc= General v24.8.6
+#!system=ios
 #!category=Gateway
 
 [General]

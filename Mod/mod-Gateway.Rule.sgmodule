@@ -4,7 +4,7 @@
 #!category=Gateway
 
 [Rule]
-# gateway Direct
+# Direct
 // Client Download (macOS)
 PROCESS-NAME,v2ray,DIRECT
 PROCESS-NAME,xray,DIRECT

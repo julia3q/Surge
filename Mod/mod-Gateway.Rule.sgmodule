@@ -1,7 +1,7 @@
-#!name=Gateway Direct
-#!desc= 🖥️ Gateway Direct v24.7.10
+#!name=Gateway Rule
+#!desc= 網關使用規則 v24.8.6
 #!system=mac
-#!category=macOS
+#!category=Gateway
 
 [Rule]
 # gateway Direct

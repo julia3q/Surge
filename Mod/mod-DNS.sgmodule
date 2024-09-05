@@ -1,5 +1,5 @@
 #!name=Surge DNS
-#!desc=修改的DNS模組
+#!desc=修改的DNS模組 update：2024.09.05
 #!author=VirgilClyne
 #!homepage=https://github.com/VirgilClyne/GetSomeFries/wiki/🌐-DNS
 #!category=Surge DNS
@@ -310,20 +310,16 @@ urlqh.cn = server:https://doh.360.cn/dns-query // 360短網址
 *.zjcdn.com = server:180.184.1.1 // 字節跳動 CDN
 
 # > BiliBili
-upos-sz-mirrorali.bilivideo.com = server:quic://dns.alidns.com // BiliBili upos視頻服務器（阿里雲）
-upos-sz-mirrorali?.bilivideo.com = server:quic://dns.alidns.com // BiliBili upos視頻服務器（阿里雲）
-upos-sz-mirrorali??.bilivideo.com = server:quic://dns.alidns.com // BiliBili upos視頻服務器（阿里雲）
-upos-sz-mirrorbos.bilivideo.com = server:180.76.76.76 // BiliBili upos視頻服務器（百度雲）
-upos-sz-mirrorcos.bilivideo.com = server:https://doh.pub/dns-query // BiliBili upos視頻服務器（騰訊雲）
-upos-sz-mirrorcos?.bilivideo.com = server:https://doh.pub/dns-query // BiliBili upos視頻服務器（騰訊雲）
-upos-sz-mirrorcos??.bilivideo.com = server:https://doh.pub/dns-query // BiliBili upos視頻服務器（騰訊雲）
-upos-sz-upcdnbd??.bilivideo.com = server:180.76.76.76 // BiliBili upos視頻服務器（百度雲）
-upos-sz-upcdntx.bilivideo.com = server:https://doh.pub/dns-query // BiliBili upos視頻服務器（騰訊雲）
+#upos-sz-mirrorali.bilivideo.com = server:quic://dns.alidns.com // BiliBili upos視頻服務器（阿里雲）
+#upos-sz-mirrorali?.bilivideo.com = server:quic://dns.alidns.com // BiliBili upos視頻服務器（阿里雲）
+#upos-sz-mirrorali??.bilivideo.com = server:quic://dns.alidns.com // BiliBili upos視頻服務器（阿里雲）
+#upos-sz-mirrorbos.bilivideo.com = server:180.76.76.76 // BiliBili upos視頻服務器（百度雲）
+#upos-sz-mirrorcos.bilivideo.com = server:https://doh.pub/dns-query // BiliBili upos視頻服務器（騰訊雲）
+#upos-sz-mirrorcos?.bilivideo.com = server:https://doh.pub/dns-query // BiliBili upos視頻服務器（騰訊雲）
+#upos-sz-mirrorcos??.bilivideo.com = server:https://doh.pub/dns-query // BiliBili upos視頻服務器（騰訊雲）
+#upos-sz-upcdnbd??.bilivideo.com = server:180.76.76.76 // BiliBili upos視頻服務器（百度雲）
+#upos-sz-upcdntx.bilivideo.com = server:https://doh.pub/dns-query // BiliBili upos視頻服務器（騰訊雲）
 
-# > 🇨🇳 CHN
-# CNNIC SDNS
-*.gov.cn = server:1.2.4.8 // 中國政府網
-*.政務 = server:1.2.4.8 // 中國政府網
 
 # > 🇹🇼 TWN
 # 中華電信
@@ -332,7 +328,6 @@ upos-sz-upcdntx.bilivideo.com = server:https://doh.pub/dns-query // BiliBili upo
 *.emome.net = server:https://dns.hinet.net/dns-query // 中華電信emome
 # Taiwan Network Information Center
 *.tw = server:https://dns.twnic.tw/dns-query // TWNIC DNS
-*.taipei = server:https://dns.twnic.tw/dns-query // TWNIC DNS
 *.com.tw = server:https://dns.twnic.tw/dns-query // TWNIC DNS
 *.net.tw = server:https://dns.twnic.tw/dns-query // TWNIC DNS
 *.gov.tw = server:https://dns.twnic.tw/dns-query // TWNIC DNS

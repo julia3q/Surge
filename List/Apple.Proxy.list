@@ -1,8 +1,8 @@
-# NAME: Apple Proxy beta v0.9
-# UPDATED: 2024-07-10 13:56
+# NAME: Apple Proxy
+# UPDATED: 2024-09-07 11:50
 
 #  代理加速 iCloud、App Store、TV+、Music、iTunes
-#  解鎖 iMessage、Facetime、iCloud Private Relay、Testflight、iBooks、Podcasts、News
+#  解鎖 iMessage、Facetime、iCloud Private Relay、Testflight、iBooks、Podcasts
 #  
 #
 #  Source:
@@ -12,6 +12,14 @@
 #  https://github.com/geekdada/surge-list/blob/master/surgio-snippet/apple.tpl
 #  https://ruleset.skk.moe/List/non_ip/apple_services.conf
 #----------------------------------------
+
+# > macOS 緩存
+DOMAIN,metrics.icloud.com
+DOMAIN,iadsdk.apple.com
+
+# > 驗證
+# 家庭共享
+DOMAIN-SUFFIX,pancake.apple.com
 
 # > iCloud
 DOMAIN-SUFFIX,icloud.com
@@ -71,7 +79,6 @@ DOMAIN-SUFFIX,lcdn-locator.apple.com
 DOMAIN-SUFFIX,lcdn-registration.apple.com
 DOMAIN-SUFFIX,suconfig.apple.com
 #DOMAIN-SUFFIX,xp-cdn.apple.com
-
 
 #! > iTunes
 #.itunes.apple.com
@@ -140,25 +147,17 @@ DOMAIN-SUFFIX,news-edge.apple.com
 DOMAIN-SUFFIX,news-events.apple.com
 DOMAIN-SUFFIX,apple.news
 
-
-# > 驗證
-# 家庭共享
-DOMAIN-SUFFIX,pancake.apple.com
-
 # > Look Up (Only for Wikipedia@macOS, Surge Enhance Mode enabled required)
 DOMAIN-SUFFIX,lookup-api.apple.com
 DOMAIN-SUFFIX,e16991.b.akamaiedge.net
-
-# > Look Up (Only for Wikipedia@macOS, Surge Enhance Mode enabled required)
 PROCESS-NAME,LookupViewService
 PROCESS-NAME,/System/Library/PrivateFrameworks/Lookup.framework/Versions/A/XPCServices/LookupViewService.xpc/Contents/MacOS/LookupViewService
 
-USER-AGENT,AppleNews*
-USER-AGENT,com.apple.news*
+# > iOS
 USER-AGENT,AppleTV*
 USER-AGENT,com.apple.tv*
 
-PROCESS-NAME,News
+# > macOS
 PROCESS-NAME,trustd
 PROCESS-NAME,netbiosd
 PROCESS-NAME,com.apple.geod

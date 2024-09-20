@@ -310,15 +310,15 @@ urlqh.cn = server:https://doh.360.cn/dns-query // 360短網址
 *.zjcdn.com = server:180.184.1.1 // 字節跳動 CDN
 
 # > BiliBili
-upos-sz-mirrorali.bilivideo.com = server:quic://dns.alidns.com // BiliBili upos視頻服務器（阿里雲）
-upos-sz-mirrorali?.bilivideo.com = server:quic://dns.alidns.com // BiliBili upos視頻服務器（阿里雲）
-upos-sz-mirrorali??.bilivideo.com = server:quic://dns.alidns.com // BiliBili upos視頻服務器（阿里雲）
-upos-sz-mirrorbos.bilivideo.com = server:180.76.76.76 // BiliBili upos視頻服務器（百度雲）
-upos-sz-mirrorcos.bilivideo.com = server:https://doh.pub/dns-query // BiliBili upos視頻服務器（騰訊雲）
-upos-sz-mirrorcos?.bilivideo.com = server:https://doh.pub/dns-query // BiliBili upos視頻服務器（騰訊雲）
-upos-sz-mirrorcos??.bilivideo.com = server:https://doh.pub/dns-query // BiliBili upos視頻服務器（騰訊雲）
-upos-sz-upcdnbd??.bilivideo.com = server:180.76.76.76 // BiliBili upos視頻服務器（百度雲）
-upos-sz-upcdntx.bilivideo.com = server:https://doh.pub/dns-query // BiliBili upos視頻服務器（騰訊雲）
+#upos-sz-mirrorali.bilivideo.com = server:quic://dns.alidns.com // BiliBili upos視頻服務器（阿里雲）
+#upos-sz-mirrorali?.bilivideo.com = server:quic://dns.alidns.com // BiliBili upos視頻服務器（阿里雲）
+#upos-sz-mirrorali??.bilivideo.com = server:quic://dns.alidns.com // BiliBili upos視頻服務器（阿里雲）
+#upos-sz-mirrorbos.bilivideo.com = server:180.76.76.76 // BiliBili upos視頻服務器（百度雲）
+#upos-sz-mirrorcos.bilivideo.com = server:https://doh.pub/dns-query // BiliBili upos視頻服務器（騰訊雲）
+#upos-sz-mirrorcos?.bilivideo.com = server:https://doh.pub/dns-query // BiliBili upos視頻服務器（騰訊雲）
+#upos-sz-mirrorcos??.bilivideo.com = server:https://doh.pub/dns-query // BiliBili upos視頻服務器（騰訊雲）
+#upos-sz-upcdnbd??.bilivideo.com = server:180.76.76.76 // BiliBili upos視頻服務器（百度雲）
+#upos-sz-upcdntx.bilivideo.com = server:https://doh.pub/dns-query // BiliBili upos視頻服務器（騰訊雲）
 
 
 # > 🇹🇼 TWN

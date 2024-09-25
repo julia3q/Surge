@@ -1,8 +1,9 @@
-#!name=Surge DNS
-#!desc=修改的DNS模組 update：2024.09.05
+#!name=Celluar DNS
+#!desc=For celluarPhone update：2024.09.05
 #!author=VirgilClyne
 #!homepage=https://github.com/VirgilClyne/GetSomeFries/wiki/🌐-DNS
 #!category=Surge DNS
+#!system=ios
 
 [General]
 #1.域名按所屬DNS進行分流解析 2.路由器地址使用系統DNS進行解析 3.特殊地址使用規範DNS進行解析
@@ -247,26 +248,6 @@ url.cn = server:https://doh.pub/dns-query // 騰訊短網址
 *.bcehosts.com = server:180.76.76.76 // 百度智能雲 主機
 dwz.cn = server:180.76.76.76 // 百度短網址
 
-# > 360
-# refer: https://sdns.360.net/dnsPublic.html#course
-*.360.cn = server:https://doh.360.cn/dns-query // 360安全中心
-*.360safe.com = server:https://doh.360.cn/dns-query // 360安全衛士
-*.360kuai.com = server:https://doh.360.cn/dns-query // 360快資訊
-*.so.com = server:https://doh.360.cn/dns-query // 360搜索
-*.360webcache.com = server:https://doh.360.cn/dns-query // 360網頁快照服務
-*.qihuapi.com = server:https://doh.360.cn/dns-query // 奇虎api
-*.qhimg.com = server:https://doh.360.cn/dns-query // 360圖床
-*.qhimgs.com = server:https://doh.360.cn/dns-query // 360圖床
-*.qhimgs?.com = server:https://doh.360.cn/dns-query // 360圖床
-*.qhmsg.com = server:https://doh.360.cn/dns-query // 360
-*.qhres.com = server:https://doh.360.cn/dns-query // 奇虎靜態資源
-*.qhres?.com = server:https://doh.360.cn/dns-query // 奇虎靜態資源
-*.dhrest.com = server:https://doh.360.cn/dns-query // 導航靜態文件
-*.qhupdate.com = server:https://doh.360.cn/dns-query // 360
-*.yunpan.cn = server:https://doh.360.cn/dns-query // 360安全雲盤
-*.yunpan.com.cn = server:https://doh.360.cn/dns-query // 360安全雲盤
-*.yunpan.com = server:https://doh.360.cn/dns-query // 360安全雲盤
-urlqh.cn = server:https://doh.360.cn/dns-query // 360短網址
 
 # > Bytedance
 # refer: https://www.volcengine.com/docs/6758/179060

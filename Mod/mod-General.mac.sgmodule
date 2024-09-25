@@ -1,6 +1,6 @@
-#!name=General(iOS)
+#!name=General Mac
 #!desc= General date：2024.8.6
-#!system=ios
+#!system=mac
 #!category=Gateway
 
 [General]

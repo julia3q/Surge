@@ -2,7 +2,7 @@
 # UPDATED: 2024-09-07 11:50
 
 #  代理加速 iCloud、App Store、TV+、Music、iTunes
-#  解鎖 iMessage、Facetime、iCloud Private Relay、Testflight、iBooks、Podcasts
+#  解鎖 iMessage、Facetime、Testflight、iBooks、Podcasts
 #  
 #
 #  Source:
@@ -36,15 +36,6 @@ DOMAIN-SUFFIX,apps.apple.com
 DOMAIN-SUFFIX,appstore.com
 DOMAIN-SUFFIX,store.apple.com
 DOMAIN-SUFFIX,blobstore.apple.com
-
-#! > iCloud Private Relay
-#Allow for network traffic audits
-DOMAIN-SUFFIX,mask.icloud.com
-DOMAIN-SUFFIX,mask.apple-dns.net
-DOMAIN-SUFFIX,mask-canary.icloud.com
-DOMAIN-SUFFIX,canary.mask.apple-dns.net
-DOMAIN-SUFFIX,mask-h2.icloud.com
-DOMAIN-SUFFIX,mask-t.apple-dns.net
 
 #! > Beta 版更新項目
 DOMAIN-SUFFIX,bpapi.apple.com

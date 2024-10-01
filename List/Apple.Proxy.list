@@ -19,7 +19,7 @@ DOMAIN,iadsdk.apple.com
 
 # > 驗證
 # 家庭共享
-DOMAIN-SUFFIX,pancake.apple.com
+#DOMAIN-SUFFIX,pancake.apple.com
 
 # > iCloud
 DOMAIN-SUFFIX,icloud.com

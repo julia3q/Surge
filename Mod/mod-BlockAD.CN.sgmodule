@@ -8,7 +8,6 @@ RULE-SET,https://raw.githubusercontent.com/julia3q/Surge/main/List/AD.Direct.lis
 
 #! 通用去廣告
 DOMAIN-KEYWORD,app-site.association,REJECT
-DOMAIN-SUFFIX,ad.ettoday.net,DIRECT
 DOMAIN,sessions.bugsnag.com,REJECT-DROP
 DOMAIN-KEYWORD,51yes,REJECT
 DOMAIN-KEYWORD,acs86,REJECT
@@ -90,10 +89,10 @@ DOMAIN-SUFFIX,log.aliyuncs.com,REJECT
 DOMAIN-SUFFIX,log.mmstat.com,REJECT
 
 # sukka-reject
+# extended-matching 參數僅適用於DOMAIN 、 DOMAIN-SUFFIX 、 DOMAIN-KEYWORD規則。
 DOMAIN-SET,https://ruleset.skk.moe/List/domainset/reject.conf,REJECT,extended-matching
 DOMAIN-SET,https://ruleset.skk.moe/List/domainset/reject_extra.conf,REJECT,extended-matching
 
-# extended-matching參數僅適用於DOMAIN 、 DOMAIN-SUFFIX 、 DOMAIN-KEYWORD規則。
 RULE-SET,https://ruleset.skk.moe/List/non_ip/reject.conf,REJECT
 RULE-SET,https://ruleset.skk.moe/List/non_ip/reject-no-drop.conf,REJECT-NO-DROP
 RULE-SET,https://ruleset.skk.moe/List/non_ip/reject-drop.conf,REJECT-DROP

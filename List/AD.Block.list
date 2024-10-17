@@ -4,8 +4,8 @@
 # UPDATED: 2024-10-17 22:16:15
 
 #! 通用去廣告
-DOMAIN,m.vpon.com
-DOMAIN,bugsnag.com
+.m.vpon.com
+.bugsnag.com
 DOMAIN-KEYWORD,app-site.association
 DOMAIN-KEYWORD,51yes
 DOMAIN-KEYWORD,acs86

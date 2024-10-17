@@ -1,11 +1,11 @@
 #!name=BlockAD-CN
-#!desc=CN 環境去除廣告。2024.09.07
+#!desc=CN 環境去除廣告。2024.10.17
 #!category=阻斷廣告
 
 [Rule]
 #! 誤殺放行
 RULE-SET,https://raw.githubusercontent.com/julia3q/Surge/main/List/AD.Direct.list,DIRECT
-DOMAIN-SET,https://raw.githubusercontent.com/julia3q/Surge/main/List/Block.AD.list,DIRECT
+DOMAIN-SET,https://raw.githubusercontent.com/julia3q/Surge/main/List/AD.Block.list,DIRECT
 
 # sukka-reject
 # extended-matching 參數僅適用於DOMAIN 、 DOMAIN-SUFFIX 、 DOMAIN-KEYWORD規則。

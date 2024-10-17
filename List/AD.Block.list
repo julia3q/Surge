@@ -1,12 +1,19 @@
-# NAME: Block
+# NAME: AD.Block
 # AUTHOR: Julia
-# REPO: https://github.com/julia/com
+# REPO: https://github.com/julia/com/List
 # UPDATED: 2024-10-17 14:36:45
 
 #! 通用去廣告
-.m.vpon.com
+.anylist.c.appier.net
+.track
+.tracking
+.safebrowsing
 .bugsnag.com
 .app-site.association
+#!---
+.m.vpon.com
+.log.aliyuncs.com
+.log.mmstat.com
 .51yes
 .acs86
 .adashx
@@ -82,8 +89,6 @@
 .flurry.com
 .mopub.com
 .gz-data.com
-.log.aliyuncs.com
-.log.mmstat.com
 
 
 

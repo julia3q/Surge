@@ -5,7 +5,7 @@
 [Rule]
 #! 誤殺放行
 RULE-SET,https://raw.githubusercontent.com/julia3q/com/main/List/AD.Direct.list,DIRECT
-DOMAIN-SET,https://raw.githubusercontent.com/julia3q/com/main/List/AD.Block.list,DIRECT
+DOMAIN-SET,https://raw.githubusercontent.com/julia3q/com/main/List/AD.Block.list,REJECT,extended-matching
 
 # sukka-reject
 # extended-matching 參數僅適用於DOMAIN 、 DOMAIN-SUFFIX 、 DOMAIN-KEYWORD規則。

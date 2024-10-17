@@ -3,7 +3,7 @@
 #!category=阻斷廣告
 
 [Rule]
-DOMAIN-SET,https://raw.githubusercontent.com/julia3q/com/main/List/AD.Block.list,DIRECT
+DOMAIN-SET,https://raw.githubusercontent.com/julia3q/com/main/List/AD.Block.list,REJECT,extended-matching
 
 #! Line 錢包頁中間的橫幅
 URL-REGEX,^https:\/\/vos\.line-scdn\.net\/wallet\/banner\/WalletTab_Middle,REJECT

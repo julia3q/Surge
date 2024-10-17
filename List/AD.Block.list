@@ -3,17 +3,18 @@
 # REPO: https://github.com/julia/com/List
 # UPDATED: 2024-10-17 14:36:45
 
-#! 通用去廣告
+#! 通用去追蹤
+.app-site.association
 .anylist.c.appier.net
+.analytics
+.bugsnag.com
+.crashlytics
+.gz-data.com
 .track
 .tracking
 .safebrowsing
-.bugsnag.com
-.app-site.association
 #!---
 .m.vpon.com
-.log.aliyuncs.com
-.log.mmstat.com
 .51yes
 .acs86
 .adashx
@@ -44,7 +45,6 @@
 .apptimize
 .baichuan
 .cnzz
-.crashlytics
 .dnserror
 .domob
 .doubleclick
@@ -66,7 +66,6 @@
 .openx
 .partnerad
 .pingfore
-.safebrowsing
 .sensor
 .shence
 .shujupie

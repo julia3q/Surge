@@ -1,19 +1,20 @@
 # NAME: Skype
 # AUTHOR: Julia
-# REPO: https://github.com/julia/Surge
-# UPDATED: 2024-08-27 22:16:15
+# REPO: https://github.com/julia/com/List
+# UPDATED: 2024-10-17 14:30:15
 
-DOMAIN-SUFFIX,sky.com
-DOMAIN-SUFFIX,skygo.co.nz
-DOMAIN-SUFFIX,cloudapp.net
-DOMAIN-SUFFIX,lync.com
-DOMAIN-SUFFIX,sfbassets.com
-DOMAIN-SUFFIX,skype
-DOMAIN-SUFFIX,skype.com
-DOMAIN-SUFFIX,skype.net
-DOMAIN-SUFFIX,skypeassets.com
-DOMAIN-SUFFIX,skypeassets.net
-DOMAIN-SUFFIX,skypeforbusiness.com
+.skype
+.sky.com
+.sky.cn
+.skype.com
+.skype.net
+.skygo.co.nz
+.cloudapp.net
+.lync.com
+.sfbassets.com
+.skypeassets.com
+.skypeassets.net
+.skypeforbusiness.com
 
 
 

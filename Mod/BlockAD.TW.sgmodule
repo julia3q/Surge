@@ -5,6 +5,7 @@
 # 🔗 其他LineAD模块for iOS链接:https://raw.githubusercontent.com/jkgtw/Surge/master/Modules/LINE-ADs.sgmodule
 
 [Rule]
+DOMAIN-SET,https://raw.githubusercontent.com/julia3q/Surge/main/List/Block.AD.list,DIRECT
 #! Line 錢包頁中間的橫幅
 URL-REGEX,^https:\/\/vos\.line-scdn\.net\/wallet\/banner\/WalletTab_Middle,REJECT
 #! Line 新聞

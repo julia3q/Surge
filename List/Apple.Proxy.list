@@ -1,9 +1,8 @@
 # NAME: Apple Proxy
 # UPDATED: 2024-09-07 11:50
 
-#  代理加速 iCloud、App Store、TV+、Music、iTunes
-#  解鎖 iMessage、Facetime、Testflight、iBooks、Podcasts
-#  
+#  解鎖 Siri & Spotlight、iBooks、Podcasts
+#  代理 iCloud、App Store、TV+、Music、iTunes、icloud private relay、Testflight、iMessage、Facetime
 #
 #  Source:
 #  https://support.apple.com/zh-tw/HT210060
@@ -12,6 +11,41 @@
 #  https://github.com/geekdada/surge-list/blob/master/surgio-snippet/apple.tpl
 #  https://ruleset.skk.moe/List/non_ip/apple_services.conf
 #----------------------------------------
+
+#! > locationd
+DOMAIN-SUFFIX,gs-loc.apple.com
+
+#! > Asset Cache Locator Service
+DOMAIN-SUFFIX,lcdn-locator.apple.com
+
+#! > Caching Server Registration macOS
+DOMAIN-SUFFIX,lcdn-registration.apple.com
+DOMAIN-SUFFIX,suconfig.apple.com
+#DOMAIN-SUFFIX,xp-cdn.apple.com
+
+#! > Region
+DOMAIN-SUFFIX,service.gc.apple.com
+DOMAIN-SUFFIX,appleid.apple.com
+DOMAIN-SUFFIX,gc.apple.com
+DOMAIN-SUFFIX,gsa.apple.com
+
+
+# ☁️ iCloud Private Relay
+# https://developer.apple.com/cn/support/prepare-your-network-for-icloud-private-relay/
+# Private Relay API
+USER-AGENT,Transparent%20network%20proxy%20for%20Apple%20system%20services*
+DOMAIN,mask-api.icloud.com
+DOMAIN,mask-api.fe.apple-dns.net
+
+# > iCloud Private Relay
+# https://mask-api.icloud.com/egress-ip-ranges.csv
+# Allow for network traffic audits
+DOMAIN,mask.icloud.com
+DOMAIN,mask.apple-dns.net
+DOMAIN,mask-canary.icloud.com
+DOMAIN,canary.mask.apple-dns.net
+DOMAIN,mask-h2.icloud.com
+DOMAIN,mask-t.apple-dns.net
 
 # > macOS 緩存
 DOMAIN,metrics.icloud.com
@@ -31,12 +65,6 @@ DOMAIN-SUFFIX,mail.me.com
 DOMAIN-SUFFIX,me.com
 DOMAIN-SUFFIX,comconvertkit-mail2.com
 
-#! > App Store
-DOMAIN-SUFFIX,apps.apple.com
-DOMAIN-SUFFIX,appstore.com
-DOMAIN-SUFFIX,store.apple.com
-DOMAIN-SUFFIX,blobstore.apple.com
-
 #! > Beta 版更新項目
 DOMAIN-SUFFIX,bpapi.apple.com
 
@@ -46,15 +74,11 @@ DOMAIN-SUFFIX,apple.co
 # > iMessage 和 Facetime 服务器
 DOMAIN-SUFFIX,ess.apple.com
 
-#! > locationd
-DOMAIN-SUFFIX,gs-loc.apple.com
-DOMAIN-SUFFIX,lcdn-locator.apple.com
-
-#! > Region
-DOMAIN-SUFFIX,service.gc.apple.com
-DOMAIN-SUFFIX,appleid.apple.com
-DOMAIN-SUFFIX,gc.apple.com
-DOMAIN-SUFFIX,gsa.apple.com
+#! > App Store
+DOMAIN-SUFFIX,apps.apple.com
+DOMAIN-SUFFIX,appstore.com
+DOMAIN-SUFFIX,store.apple.com
+DOMAIN-SUFFIX,blobstore.apple.com
 
 #! > Mac OS 的 App Store 服务器
 DOMAIN-SUFFIX,swscan.apple.com
@@ -63,16 +87,7 @@ DOMAIN-SUFFIX,swquery.apple.com
 #! > macOS Rosetta 2 更新
 DOMAIN-SUFFIX,configuration.apple.com
 
-#! > Asset Cache Locator Service
-DOMAIN-SUFFIX,lcdn-locator.apple.com
-
-#! > Caching Server Registration macOS
-DOMAIN-SUFFIX,lcdn-registration.apple.com
-DOMAIN-SUFFIX,suconfig.apple.com
-#DOMAIN-SUFFIX,xp-cdn.apple.com
-
 #! > iTunes
-#.itunes.apple.com
 DOMAIN-SUFFIX,mzstatic.com
 DOMAIN-SUFFIX,mesu.apple.com
 
@@ -89,9 +104,12 @@ DOMAIN-SUFFIX,su.itunes.apple.com
 DOMAIN-SUFFIX,upp.itunes.apple.com
 DOMAIN-SUFFIX,itunes-apple.com.akadns.net
 
+# > iOS
+USER-AGENT,AppleTV*
+USER-AGENT,com.apple.tv*
 #! > TV+
-DOMAIN-SUFFIX,tv.apple.com
-DOMAIN-SUFFIX,tv.applemusic.com
+#DOMAIN-SUFFIX,tv.apple.com
+#DOMAIN-SUFFIX,tv.applemusic.com
 
 #! > Music
 #DOMAIN-SUFFIX,music.apple.com
@@ -129,24 +147,16 @@ DOMAIN-SUFFIX,guzzoni.apple.com
 DOMAIN-SUFFIX,digicert.com
 DOMAIN-SUFFIX,apple-livephotoskit.com
 
-# Unblock news
-DOMAIN-SUFFIX,apple.comscoreresearch.com
-DOMAIN-SUFFIX,news-assets.apple.com
-DOMAIN-SUFFIX,news-client-search.apple.com
-DOMAIN-SUFFIX,news-client.apple.com
-DOMAIN-SUFFIX,news-edge.apple.com
-DOMAIN-SUFFIX,news-events.apple.com
-DOMAIN-SUFFIX,apple.news
 
 # > Look Up (Only for Wikipedia@macOS, Surge Enhance Mode enabled required)
-DOMAIN-SUFFIX,lookup-api.apple.com
-DOMAIN-SUFFIX,e16991.b.akamaiedge.net
 PROCESS-NAME,LookupViewService
 PROCESS-NAME,/System/Library/PrivateFrameworks/Lookup.framework/Versions/A/XPCServices/LookupViewService.xpc/Contents/MacOS/LookupViewService
+DOMAIN,lookup-api.apple.com
+DOMAIN,lookup-api.apple.com.edgekey.net
+DOMAIN-SUFFIX,e16991.b.akamaiedge.net
 
-# > iOS
-USER-AGENT,AppleTV*
-USER-AGENT,com.apple.tv*
+
+
 
 # > macOS
 PROCESS-NAME,trustd

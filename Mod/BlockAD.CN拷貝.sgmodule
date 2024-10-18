@@ -1,0 +1,9 @@
+#!name=Apple.Service
+#!desc=Apple功能和集成服务
+#!category=Apple.Service
+
+[Rule]
+# > Apple.Service 指定節點
+RULE-SET,https://ruleset.skk.moe/List/non_ip/apple_cn.conf,DIRECT
+RULE-SET,https://raw.githubusercontent.com/julia3q/Surge/main/List/Apple.Proxy.list,🍎 Apple
+RULE-SET,https://raw.githubusercontent.com/julia3q/Surge/main/List/Apple.IP.list,🍎 Apple

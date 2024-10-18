@@ -72,6 +72,7 @@ PROCESS-NAME,/System/Applications/Weather.app/Contents/MacOS/Weather
 
 # 其它-解鎖輔助
 # Weather、itunes
+DOMAIN,s.mzstatic.com
 DOMAIN-SUFFIX,mzstatic.com
 
 #其它

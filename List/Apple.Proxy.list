@@ -58,6 +58,7 @@ DOMAIN-SUFFIX,apple-dns.net
 
 
 #! > App Store
+DOMAIN-SUFFIX,mesu.apple.com
 DOMAIN-SUFFIX,apps.apple.com
 DOMAIN-SUFFIX,appstore.com
 DOMAIN-SUFFIX,store.apple.com
